@@ -1,4 +1,4 @@
-# [_A Beautiful Day_](#)
+# [_A Beautiful Day_](https://k8thedinosaur.github.io/a-beautiful-day/)
 
 #### _HTML/CSS/JS exercise for Epicodus, 4/3/20_
 
@@ -32,8 +32,7 @@ A page written in HTML, using CSS/Bootstrap styling and JavaScript/jQuery functi
   * input: 3 
   * output: 0, beep, boop, won't you be my neighbor
 
-* Specs for multiple digits:
-(descending hierarchy of importance starting with 3)
+* Specs for multiple digits (descending hierarchy of importance starting with 3):
 
   * input 13 
   * "Won't you be my neighbor?"
@@ -43,6 +42,9 @@ A page written in HTML, using CSS/Bootstrap styling and JavaScript/jQuery functi
 
   * input: 32 
   * "Won't you be my neighbor?"
+
+* Additional options:
+  * Add a second form field that takes a name. ~~For numbers that are divisible by 3,~~ add the user's name to the output e.g. "Won't you be my neighbor, Mr Kitty?"
 
 ## Setup/Installation Requirements
 
