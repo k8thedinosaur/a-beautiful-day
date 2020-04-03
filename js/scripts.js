@@ -8,10 +8,15 @@ $(document).ready(function() {
     for (var num = 0; num <= number; num++) {
       numberArray.push(num);
     }
+
+    numberArrayToString = numberArray.toString();
+    numberArraySplit = numberArrayToString.split(",");
+    numberArrayJoined = numberArraySplit.join(", ");
     
     console.log(numberArray);
+    console.log(numberArrayToString);
 
-    $("#output").append(numberArray);
+    $("#output").append(numberArrayJoined);
     event.preventDefault();
   })
 })
