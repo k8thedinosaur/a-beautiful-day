@@ -33,10 +33,11 @@ $(document).ready(function() {
     var number = parseInt($("#number-form").val());
     Robogersify(number, name);
     var answer = addCommaSpace(outputArray);
-    var reversedAnswer = reverse(outputArray);
-    console.log(reversedAnswer);
+    // var reversedAnswer = reverse(outputArray);
+    // console.log(reversedAnswer);
   $("#result").show();
-  $("#output").html(answer);
+  // $("#output").clear();
+  $("#output").append(answer);
   event.preventDefault();
   });
 
