@@ -32,6 +32,18 @@ A page written in HTML, using CSS/Bootstrap styling and JavaScript/jQuery functi
   * input: 3 
   * output: 0, beep, boop, won't you be my neighbor
 
+Specs for multiple digits:
+(descending hierarchy of importance starting with 3)
+
+  * input 13 
+  * "Won't you be my neighbor?"
+  
+  * input: 21 
+  * "Boop".
+
+  * input: 32 
+  * "Won't you be my neighbor?"
+
 ## Setup/Installation Requirements
 
 * Fork repo

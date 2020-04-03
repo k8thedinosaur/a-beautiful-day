@@ -6,35 +6,28 @@ $(document).ready(function() {
 
     var numberArray = [];
     for (var num = 0; num <= number; num++) {
-      numberArray.push(num);
+      if (num.includes(3)) {
+        num.replace(3, "Won't you be my neighbor?");
+      } else if (num.includes(2)) {
+        num.replace(2, "Boop!");
+      }else if (noTwos.includes(1)) {
+        num.replace(1, "Beep!");
+      numberArray.push();
     };
-    console.log(numberArray, "numberArray");
+    // console.log(numberArray, "numberArray");
 
     numberArrayToString = numberArray.toString();
-    
-    if (numberArrayToString.includes("3")) {
-      var noThrees = numberArrayToString.replace("3", "Won't you be my neighbor?");
+
+    for (i in numberArrayToString) {
+
+      };
     };
     
-    if (noThrees.includes("2")) {
-      var noTwos = noThrees.replace("2", "Boop!");
-    }
-
-    if (noTwos.includes("1")) {
-      // console.log("contains 1")
-      var noOnes = noTwos.replace("1", "Beep!");
-      // console.log(noOnes);
-    };
-    
-    // numberArraySplit = numberArrayToString.split(",");
-    // console.log(typeof numberArraySplit, " typeof numberArraySplit");
-    // console.log(numberArraySplit, "numberArraySplit");
+    AnswerSplit = noOnes.split(",");
+    answer = AnswerSplit.join(", ");
     
 
-    // numberArrayJoined = numberArraySplit.join(", ");
-    
-
-    $("#output").append(noOnes);
+    $("#output").append(answer);
     event.preventDefault();
   })
 })
