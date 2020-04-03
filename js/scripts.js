@@ -6,26 +6,30 @@ $(document).ready(function() {
 
   var number = parseInt($("#number-form").val());
   // console.log(number);
-  
-  var input = [];
-  for (var num = 0; num <= number; num++) {
-    if (num.toString().includes("3")) {
-      input.push("Won't you be my neighbor?");
-    } else if (num.toString().includes("2")) {
-      input.push("Boop!");
-    } else if (num.toString().includes("1")) {
-      input.push("Beep!");
-    } else {
-      input.push(num.toString());
+
+  var outputArray = [];
+  function Robogersify(input) {
+    for (var num = 0; num <= number; num++) {
+      if (num.toString().includes("3")) {
+        input.push("Won't you be my neighbor?");
+      } else if (num.toString().includes("2")) {
+        input.push("Boop!");
+      } else if (num.toString().includes("1")) {
+        input.push("Beep!");
+      } else {
+        input.push(num.toString());
+      };
     };
+    return input;
   };
-  console.log("first f: " + input);
-    
+
+  var newthing = Robogersify(outputArray);
+  console.log(newthing);
+
   function addCommaSpace(input) {
     return input.toString().split(",").join(", ");
   };
-
-  var answer = addCommaSpace(input);
+  var answer = addCommaSpace(outputArray);
   console.log("makeitpretty: " + answer);
     
     
