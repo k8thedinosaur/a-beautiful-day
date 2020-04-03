@@ -13,24 +13,18 @@ $(document).ready(function() {
       } else if (num.toString().includes("1")) {
         numberArray.push("Beep!");
       } else {
-        numberArray.push(num);
+        numberArray.push(num.toString());
       };
     };
+  console.log(numberArray);
 
-    // console.log(numberArray, "numberArray");
-
-    // numberArrayToString = numberArray.toString();
-
-    // for (i in numberArrayToString) {
-
-    //   };
-    // };
-    
-    // AnswerSplit = noOnes.split(",");
-    // answer = AnswerSplit.join(", ");
+  numberArrayToString = numberArray.toString();
+  AnswerSplit = numberArrayToString.split(",");
+  // console.log(AnswerSplit);
+  answer = AnswerSplit.join(", ");
     
 
-  $("#output").append(numberArray);
+  $("#output").append(answer);
   event.preventDefault();
   });
 });
