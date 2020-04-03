@@ -6,28 +6,32 @@ $(document).ready(function() {
 
     var numberArray = [];
     for (var num = 0; num <= number; num++) {
-      if (num.includes(3)) {
-        num.replace(3, "Won't you be my neighbor?");
-      } else if (num.includes(2)) {
-        num.replace(2, "Boop!");
-      }else if (noTwos.includes(1)) {
-        num.replace(1, "Beep!");
-      numberArray.push();
-    };
-    // console.log(numberArray, "numberArray");
-
-    numberArrayToString = numberArray.toString();
-
-    for (i in numberArrayToString) {
-
+      if (num.toString().includes("3")) {
+        num.replace("Won't you be my neighbor?");
+        numberArray.push(num);
+      } else if (num.toString().includes("2")) {
+        num.replace("Boop!");
+        numberArray.push(num);
+      } else if (num.toString().includes("1")) {
+        num.replace("Beep!");
+        numberArray.push(num);
       };
     };
+
+    // console.log(numberArray, "numberArray");
+
+    // numberArrayToString = numberArray.toString();
+
+    // for (i in numberArrayToString) {
+
+    //   };
+    // };
     
-    AnswerSplit = noOnes.split(",");
-    answer = AnswerSplit.join(", ");
+    // AnswerSplit = noOnes.split(",");
+    // answer = AnswerSplit.join(", ");
     
 
-    $("#output").append(answer);
-    event.preventDefault();
-  })
-})
+  $("#output").append(answer);
+  event.preventDefault();
+  });
+});
