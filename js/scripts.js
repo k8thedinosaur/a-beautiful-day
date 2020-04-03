@@ -1,10 +1,10 @@
 // bs logic 
 var outputArray = [];
 
-function Robogersify(input) {
+function Robogersify(input, name) {
   for (var num = 0; num <= input; num++) {
     if (num.toString().includes("3")) {
-      outputArray.push("Won't you be my neighbor?");
+      outputArray.push("Won't you be my neighbor, " + name + "?")
     } else if (num.toString().includes("2")) {
       outputArray.push("Boop!");
     } else if (num.toString().includes("1")) {
@@ -25,26 +25,11 @@ function addCommaSpace(input) {
 // ui logic
 $(document).ready(function() {
   $("#robot-form").submit(function(event) {
+    var name = $("#name").val();
     var number = parseInt($("#number-form").val());
-    Robogersify(number);
+    Robogersify(number, name);
     var answer = addCommaSpace(outputArray);
   $("#output").append(answer);
   event.preventDefault();
   });
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
