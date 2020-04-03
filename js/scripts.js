@@ -7,16 +7,26 @@ $(document).ready(function() {
     var numberArray = [];
     for (var num = 0; num <= number; num++) {
       numberArray.push(num);
-    }
+    };
+    console.log(numberArray, "numberArray");
 
     numberArrayToString = numberArray.toString();
+    
+    if (numberArrayToString.includes("1")) {
+      console.log("contains 1")
+      var noOnes = numberArrayToString.replace("1", "Beep!");
+      console.log(noOnes);
+    };
+    
     numberArraySplit = numberArrayToString.split(",");
+    // console.log(typeof numberArraySplit, " typeof numberArraySplit");
+    // console.log(numberArraySplit, "numberArraySplit");
+    
+
     numberArrayJoined = numberArraySplit.join(", ");
     
-    console.log(numberArray);
-    console.log(numberArrayToString);
 
-    $("#output").append(numberArrayJoined);
+    $("#output").append(noOnes);
     event.preventDefault();
   })
 })
