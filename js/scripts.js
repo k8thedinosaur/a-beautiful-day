@@ -16,10 +16,14 @@ function Robogersify(input, name) {
   return outputArray;
 };
 
+function reverse(input) {
+  return input.reverse();
+}
 
 function addCommaSpace(input) {
   return input.toString().split(",").join(", ");
 };
+
 
 
 // ui logic
@@ -29,7 +33,10 @@ $(document).ready(function() {
     var number = parseInt($("#number-form").val());
     Robogersify(number, name);
     var answer = addCommaSpace(outputArray);
-  $("#output").append(answer);
+    var reversedAnswer = reverse(outputArray);
+    console.log(reversedAnswer);
+  $("#result").show();
+  $("#output").html(answer);
   event.preventDefault();
   });
 });
