@@ -1,3 +1,29 @@
+body {
+  background-color: rgb(98, 121, 221);
+  color: rgb(29, 4, 87);
+}
+
+.container {
+  margin-top: 10%;
+  border: 5px solid rgb(145, 11, 11);
+  border-radius: 20px;
+  padding: 50px;
+  background-color: rgb(255, 255, 255);
+}
+
 #result {
   display: none;
+  margin-top: 30px;
+}
+
+/* .img {
+  background-image: url(../img/rogers.jpg)
+} */
+
+.img {
+  background-image: url("../img/rogers.jpg");
+  background-size: cover;
+  background-position: top;
+  height: 35vh;
+  border-radius: 4px 4px 0px 0px;
 }

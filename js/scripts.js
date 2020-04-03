@@ -28,7 +28,7 @@ function addCommaSpace(input) {
 
 // ui logic
 $(document).ready(function() {
-  $("#robot-form #forwards").submit(function(event) {
+  $("#robot-form").submit(function(event) {
     var name = $("#name").val();
     var number = parseInt($("#number-form").val());
     Robogersify(number, name);
@@ -40,14 +40,14 @@ $(document).ready(function() {
   event.preventDefault();
   });
 
-  $("#robot-form #backwards").submit(function(event) {
-    event.preventDefault();
-    var name = $("#name").val();
-    var number = parseInt($("#number-form").val());
-    Robogersify(number, name);
-    var reversedAnswer = addCommaSpace(outputArray);
-    var reversedAnswer = reverse(outputArray);
-    $("#result").show();
-    $("#output").html(reversedAnswer);
-  });
+  // $("#backwards").submit(function(event) {
+  //   event.preventDefault();
+  //   var name = $("#name").val();
+  //   var number = parseInt($("#number-form").val());
+  //   Robogersify(number, name);
+  //   var reversedAnswer = addCommaSpace(outputArray);
+  //   var reversedAnswer = reverse(outputArray);
+  //   $("#result").show();
+  //   $("#output").html(reversedAnswer);
+  // });
 });

@@ -9,24 +9,30 @@
   </head>
   <body>
     <div class="container">
-      <h1>Mr. Roboger's Neighborhood</h1>
-      <form id="robot-form">
-        <div class="form-group">
-          <label for="name">What's your name?</label>
-          <input id="name" class="form-control" type="text">
+      <div class="row">
+        <form id="robot-form">
+        <div class="col-md-6">
+          <h1>Mr. Roboger's Neighborhood</h1>
+            <div class="form-group">
+              <label for="name">What's your name?</label>
+              <input id="name" class="form-control" type="text">
+            </div>
+            <div class="form-group">
+              <label for="number-form">Enter a number and Mr. Roboger will count up to it in his special way!</label>
+              <input id="number-form" class="form-control" type="number">
+            </div>
+            <button type="submit" id="forwards">Let's do it!</button>
+            <!-- <button type="submit" id="backwards">Backwards?!</button> -->
+            <div id="result">
+              <span id="output"></span>
+            </div>
+          </form>
         </div>
-        <div class="form-group">
-          <label for="number-form">Enter a number and Mr. Roboger will count up to it in his special way!</label>
-          <input id="number-form" class="form-control" type="number">
+        <div class="col-md-6">
+          <div class="img"></div>
         </div>
-        <button type="submit" id="forwards">Let's do it!</button>
-        <button type="submit" id="backwards">Backwards?!</button>
-        <div id="result">
-          <span id="output"></span>
-        </div>
-        </form>
+      </div>
 
-      </form>
     </div>
  
   </body>
