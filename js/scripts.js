@@ -7,15 +7,18 @@ $(document).ready(function() {
     var numberArray = [];
     for (var num = 0; num <= number; num++) {
       if (num.toString().includes("3")) {
-        num.replace("Won't you be my neighbor?");
+        numberArray.push("Won't you be my neighbor?");
+      } else {
         numberArray.push(num);
-      } else if (num.toString().includes("2")) {
-        num.replace("Boop!");
-        numberArray.push(num);
-      } else if (num.toString().includes("1")) {
-        num.replace("Beep!");
-        numberArray.push(num);
-      };
+      } 
+      // else if (num.toString().includes("2")) {
+      //   num.replace("Boop!");
+      //   numberArray.push(num);
+      // } else if (num.toString().includes("1")) {
+      //   num.replace("Beep!");
+      //   numberArray.push(num);
+      // }
+      ;
     };
 
     // console.log(numberArray, "numberArray");
@@ -31,7 +34,7 @@ $(document).ready(function() {
     // answer = AnswerSplit.join(", ");
     
 
-  $("#output").append(answer);
+  $("#output").append(numberArray);
   event.preventDefault();
   });
 });
