@@ -2,6 +2,7 @@
 var outputArray = [];
 
 function Robogersify(input, name) {
+  console.log("roger");
   for (var num = 0; num <= input; num++) {
     if (num.toString().includes("3")) {
       outputArray.push("Won't you be my neighbor, " + name + "?")
@@ -29,37 +30,46 @@ function addCommaSpace(input) {
 // ui logic
 $(document).ready(function() {
   // $("#output").empty();
-  var name = $("#name").val();
-  var number = parseInt($("#number-form").val());
-  
   $("#robot-form button").click(function(event) {
     event.preventDefault();
-    
-    if ($(this).attr("value") == "forwards") {             
-      // $("#robot-form").submit(function() {
-        console.log("forwards");
-        // $("#robot-form").submit();
-        Robogersify(number, name);
-        var answer = addCommaSpace(outputArray);
-        // $("#result").html("");
-        $("#result").html(answer);
-      }
-    
-    if ($(this).attr("value") == "backwards") {
-      // $("#robot-form").submit(function() {
-        console.log("backwards");
-        Robogersify(number, name);
-        var reversedAnswer = reverse(outputArray);
-        $("#result").html(reversedAnswer);
-    };
-    
-    
+    // $("#output").empty();
+    var name = $("#name").val();
+    var number = parseInt($("#number-form").val());
+    Robogersify(number, name);
+    var answer = addCommaSpace(outputArray);
+    // var reversedAnswer = reverse(outputArray);
+    // console.log(reversedAnswer);
+
+    // $("#result").val = '';
+    $("#result").html(answer);
     $("#result").show();
+    outputArray = [];
+  });
+});
 
-  })
 
+  // two button code (not working)
+  // if ($(this).attr("value") == "forwards") {             
+  //   // $("#robot-form").submit(function() {
+  //     console.log("forwards");
+  //     // $("#robot-form").submit();
+  //     Robogersify(number, name);
+  //     var answer = addCommaSpace(outputArray);
+  //     // $("#result").html("");
+  //     $("#result").html(answer);
+  //   }
+  
+  // if ($(this).attr("value") == "backwards") {
+  //   // $("#robot-form").submit(function() {
+  //     console.log("backwards");
+  //     Robogersify(number, name);
+  //     var reversedAnswer = reverse(outputArray);
+  //     $("#result").html(reversedAnswer);
+  // };
+
+  // old backwards code
   // $("#backwards").submit(function(event) {
-  //   event.preventDefault();
+    //   event.preventDefault();
   //   var name = $("#name").val();
   //   var number = parseInt($("#number-form").val());
   //   Robogersify(number, name);
@@ -68,4 +78,3 @@ $(document).ready(function() {
   //   $("#result").show();
   //   $("#output").html(reversedAnswer);
   // });
-})
