@@ -11,13 +11,9 @@ body {
   background-color: rgb(255, 255, 255);
 }
 
-#result {
+/* #result {
   display: none;
   margin-top: 30px;
-}
-
-/* .img {
-  background-image: url(../img/rogers.jpg)
 } */
 
 .img {
@@ -25,5 +21,4 @@ body {
   background-size: cover;
   background-position: top;
   height: 35vh;
-  border-radius: 4px 4px 0px 0px;
 }

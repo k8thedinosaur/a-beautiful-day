@@ -28,18 +28,34 @@ function addCommaSpace(input) {
 
 // ui logic
 $(document).ready(function() {
-  $("#robot-form").submit(function(event) {
-    var name = $("#name").val();
-    var number = parseInt($("#number-form").val());
-    Robogersify(number, name);
-    var answer = addCommaSpace(outputArray);
-    // var reversedAnswer = reverse(outputArray);
-    // console.log(reversedAnswer);
-  $("#result").show();
-  // $("#output").clear();
-  $("#output").append(answer);
-  event.preventDefault();
-  });
+  // $("#output").empty();
+  var name = $("#name").val();
+  var number = parseInt($("#number-form").val());
+  
+  $("#robot-form button").click(function(event) {
+    event.preventDefault();
+    
+    if ($(this).attr("value") == "forwards") {             
+      $("#robot-form").submit(function() {
+        Robogersify(number, name);
+        var answer = addCommaSpace(outputArray);
+        // $("#result").html("");
+        $("#result").html(answer);
+      });
+    };
+    
+    if ($(this).attr("value") == "backwards") {
+      $("#robot-form").submit(function() {
+        Robogersify(number, name);
+        var reversedAnswer = reverse(outputArray);
+        $("#result").html(reversedAnswer);
+      });
+    };
+    
+    
+    $("#result").show();
+
+  })
 
   // $("#backwards").submit(function(event) {
   //   event.preventDefault();
@@ -51,4 +67,4 @@ $(document).ready(function() {
   //   $("#result").show();
   //   $("#output").html(reversedAnswer);
   // });
-});
+})
