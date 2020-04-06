@@ -11,10 +11,10 @@ body {
   background-color: rgb(255, 255, 255);
 }
 
-/* #result {
-  display: none;
+#result {
+  /* display: none; */
   margin-top: 30px;
-} */
+}
 
 .img {
   background-image: url("../img/rogers.jpg");
