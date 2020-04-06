@@ -36,20 +36,21 @@ $(document).ready(function() {
     event.preventDefault();
     
     if ($(this).attr("value") == "forwards") {             
-      $("#robot-form").submit(function() {
+      // $("#robot-form").submit(function() {
+        console.log("forwards");
+        // $("#robot-form").submit();
         Robogersify(number, name);
         var answer = addCommaSpace(outputArray);
         // $("#result").html("");
         $("#result").html(answer);
-      });
-    };
+      }
     
     if ($(this).attr("value") == "backwards") {
-      $("#robot-form").submit(function() {
+      // $("#robot-form").submit(function() {
+        console.log("backwards");
         Robogersify(number, name);
         var reversedAnswer = reverse(outputArray);
         $("#result").html(reversedAnswer);
-      });
     };
     
     
