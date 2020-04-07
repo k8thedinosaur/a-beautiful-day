@@ -34,11 +34,10 @@ $(document).ready(function() {
     var number = parseInt($("#number-form").val());
 
     if ($(this).attr("value") == "forwards") {             
-        console.log("forwards");
         Robogersify(number, name);
         var answer = addCommaSpace(outputArray);
         $("#result").html(answer);
-      }
+      };
     
     if ($(this).attr("value") == "backwards") {
         Robogersify(number, name);
@@ -46,10 +45,6 @@ $(document).ready(function() {
         var reversedAnswer = addCommaSpace(reversed);
         $("#result").html(reversedAnswer);
     };
-
-
-
-
 
     $("#result").show();
     outputArray = [];
